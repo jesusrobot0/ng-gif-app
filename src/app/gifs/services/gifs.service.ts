@@ -5,7 +5,6 @@ import { SearchResponse, Gif } from '../interfaces/gifs.interfaces';
 @Injectable({ providedIn: 'root' })
 export class GifsService {
   public gifList: Gif[] = [];
-  public currentTag: string = '';
 
   private _tagsHistory: string[] = [];
   private apiKey: string = 'cwxjAnGk8ZSnD1Ur4dpK1pLnKuZ1711h';
@@ -30,7 +29,6 @@ export class GifsService {
     if (tag.trim().length === 0) return;
 
     this.organizeHistory(tag);
-    this.currentTag = tag;
 
     // ? Esta es una forma de hacerlo con fetch
     // await fetch(
