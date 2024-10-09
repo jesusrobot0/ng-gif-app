@@ -51,7 +51,7 @@ export class GifsService {
     //   .then((resp) => resp.json())
     //   .then((data) => console.log(data));
 
-    // ? Esta es una forma de hacerlo con HttpClient
+    // ? Esta es una forma de hacerlo con HttpClient, forma oficial de Angular
     const params = new HttpParams()
       .set('api_key', this.apiKey)
       .set('limit', '10')
